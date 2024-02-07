@@ -275,7 +275,7 @@ input[type="text"], [type="email"], [type="number"], [type="date"] {
 }
 
 input[type="text"]:focus {
-    outline: 10px solid #FF7B7C;
+    outline: 6px solid #FF7B7C;
 }
 
 input[type="email"]:focus {
