@@ -16,6 +16,7 @@ body {
     margin: 0;
     background-color: #83E1E6;
     color: #152456;
+    text-decoration: none;
 }
 
 header {
@@ -40,9 +41,25 @@ header {
     cursor: pointer;
 }
 
-.logo:hover {
+a:link {
+    text-decoration: none;
+    color: #152456;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #152456;
+}
+
+a:hover {
+    text-decoration: none;
     color: #FF7B7C;
     scale: 110%;
+}
+
+a:active {
+    text-decoration: none;
+    color: #152456;
 }
 
 .nav {
@@ -66,13 +83,30 @@ header {
     cursor: pointer;
 }
 
-.nav-text:hover {
-    color: #FF7B7C;
-    scale: 110%;
-}
-
 .burger {
     height: 70%;
+}
+
+.drop-down {
+    position: absolute;
+    top: 4em;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #83E1E6;
+}
+
+.drop-text {
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    margin: auto;
+    height: 4em;
+    cursor: pointer;
+    display: none;
 }
 
 .nav-text-burger {
@@ -81,11 +115,15 @@ header {
     align-items: center;
     height: 2em;
     width: 3em;
-    border-color: #aaaaaa;
+    border-color: #152456;
     border-style: solid;
     border-width: 2px;
     cursor: pointer;
     margin-right: 1em;
+}
+
+.nav-text-burger:hover {
+    border-color: #FF7B7C;
 }
 
 .banner {
@@ -211,6 +249,49 @@ h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+form {
+    width: 100%;
+}
+
+label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1.4em;
+    margin-bottom: 1em;
+}
+
+input[type="text"], [type="email"], [type="number"], [type="date"] {
+    margin-top: 10px;
+    width: 70%;
+    height: 2em;
+    background-color: #83E1E6;
+    border: 2px solid #152456;
+    border-radius: 5px;
+}
+
+input[type="text"]:focus {
+    outline: 10px solid #FF7B7C;
+}
+
+input[type="email"]:focus {
+    outline: 6px solid #FF7B7C;
+}
+
+input[type="number"]:focus {
+    outline: 6px solid #FF7B7C;
+}
+
+input.orange:focus {
+    outline: 6px solid #83E1E6;
+}
+
+input.light {
+    background-color: #90D2CE;
 }
 
 .subsection-wrapper {
@@ -409,9 +490,8 @@ footer {
         display: flex;
     }
 
-    .banner-text {
-        background-color: #eef0ed;
-        padding-top: 8vw;
+    .drop-text {
+        display: flex;
     }
 
     h1 {
@@ -420,10 +500,6 @@ footer {
 
     h6 {
         font-size: 0.9em;
-    }
-
-    .banner {
-        padding-top: 15em;
     }
 
     .nav {

@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <title>Home</title>
+    <title>LSolutions</title>
 </head>
 <body>
 <header>
-    <div class="logo">Linda Solutions</div>
+    <a href="#" class="logo">Linda Solutions</a>
     <div class="nav">
-        <div class="nav-text">Hledat</div>
-        <div class="nav-text">Ozn&aacute;men&iacute;</div>
-        <div class="nav-text">Obl&iacute;ben&eacute; produkty</div>
-        <div class="nav-text">Profil</div>
-        <div class="nav-text">Ko&scaron;&iacute;k</div>
+        <a class="nav-text">Hledat</a>
+        <a class="nav-text">Ozn&aacute;men&iacute;</a>
+        <a class="nav-text">Obl&iacute;ben&eacute; produkty</a>
+        <a href="pages/profile.html" class="nav-text">Profil</a>
+        <a class="nav-text">Ko&scaron;&iacute;k</a>
     </div>
-    <div class="nav-text-burger"><img class="burger" src="img/burger.svg" alt=""></div>
+    <div onclick="burgerClick()" class="nav-text-burger"><img class="burger" src="img/burger.svg" alt=""></div>
+    <div id="drop" class="drop-down">
+        <a class="drop-text">Hledat</a>
+        <a class="drop-text">Ozn&aacute;men&iacute;</a>
+        <a class="drop-text">Obl&iacute;ben&eacute; produkty</a>
+        <a href="pages/profile.html" class="drop-text">Profil</a>
+        <a class="drop-text">Ko&scaron;&iacute;k</a>
+    </div>
 </header>
 <main class="banner">
     <img class="banner-img" alt="banner" src="img/img.png">
-    <div class="banner-text">
+    <div id="banner-text" class="banner-text">
         <h1>Ve&scaron;ker&eacute; elektronick&eacute; produkty</h1>
         <div class="buttons">
             <button class="btn-1">ZJISTIT V&Iacute;CE</button>
@@ -65,12 +72,12 @@
                 </div>
                 <button class="btn-1">POČÍTAČE</button>
             </div>
-            <img class="subsection-img" src="img/card-04.jpg" alt="">
+            <img class="subsection-img" src="img/pc.jpg" alt="">
         </section>
     </section>
     <section class="subsection-wrapper-orange">
         <section class="subsection-lower">
-            <img class="subsection-img" src="img/card-05.jpg" alt="">
+            <img class="subsection-img" src="img/household.png" alt="">
             <div class="subsection-column">
                 <div class="subsection-text-heading">Pro domácnost</div>
                 <div class="subsection-text">Vychytávky pro chytrou a automatizovanou domácnost
@@ -81,10 +88,6 @@
     </section>
 </main>
 <main class="bottom-section">
-    <section class="featured-work">
-        <img class="subsection-img" src="img/card-02.jpg" alt="">
-        <img class="subsection-img" src="img/card-01.jpg" alt="">
-    </section>
     <section class="testimony">
         <div class="testimony-container">
             <div class="individual">
@@ -113,7 +116,8 @@
     <section class="work-wrapper">
         <div class="work">
             <div class="work-text-heading">Přidejte se k nám</div>
-            <div class="work-text">Pojďte nabrat zkušenosti z mladého kolektivu pracujícím v inovativním a moderním prostředí
+            <div class="work-text">Pojďte nabrat zkušenosti z mladého kolektivu pracujícím v inovativním a moderním
+                prostředí
             </div>
             <button class="btn-1 borders">NABÍDKA</button>
         </div>

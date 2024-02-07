@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+    <title>Profile</title>
+</head>
+<body>
+<header>
+    <a href="../index.html" class="logo">Linda Solutions</a>
+    <div class="nav">
+        <a class="nav-text">Hledat</a>
+        <a class="nav-text">Ozn&aacute;men&iacute;</a>
+        <a class="nav-text">Obl&iacute;ben&eacute; produkty</a>
+        <a href="#" class="nav-text">Profil</a>
+        <a class="nav-text">Ko&scaron;&iacute;k</a>
+    </div>
+    <div onclick="burgerClick()" class="nav-text-burger"><img class="burger" src="../img/burger.svg" alt=""></div>
+    <div id="drop" class="drop-down">
+        <a class="drop-text">Hledat</a>
+        <a class="drop-text">Ozn&aacute;men&iacute;</a>
+        <a class="drop-text">Obl&iacute;ben&eacute; produkty</a>
+        <a href="#" class="drop-text">Profil</a>
+        <a class="drop-text">Ko&scaron;&iacute;k</a>
+    </div>
+</header>
+<main class="banner">
+    <img class="banner-img" alt="banner" src="../img/profile.png">
+    <div id="banner-text" class="banner-text">
+        <h1>Profil: Robert Stinka</h1>
+        <div class="buttons">
+            <button class="btn-1">EDITOVAT</button>
+        </div>
+    </div>
+</main>
+<main class="lower-mid-section">
+    <section class="subsection-wrapper">
+        <section class="subsection-lower">
+            <form class="subsection-column">
+                <div class="subsection-text-heading">Profil</div>
+                <label>Jméno
+                    <input type="text">
+                </label>
+                <label>Příjmení
+                    <input type="text">
+                </label>
+                <label>Přezdívka
+                    <input type="text">
+                </label>
+                <label>Email
+                    <input type="email">
+                </label>
+                <button class="btn-1">ULOŽIT</button>
+            </form>
+        </section>
+    </section>
+    <section class="subsection-wrapper-light">
+        <section class="subsection-lower">
+            <form class="subsection-column">
+                <div class="subsection-text-heading">Doručovací adresa</div>
+                <label>Ulice
+                    <input class="light" type="text">
+                </label>
+                <label>Popisné č.
+                    <input class="light" type="number">
+                </label>
+                <label>Směrovací č.
+                    <input class="light" type="number">
+                </label>
+                <label>Město
+                    <input class="light" type="text">
+                </label>
+                <label>Země
+                    <input class="light" type="text">
+                </label>
+                <button class="btn-1">ULOŽIT</button>
+            </form>
+        </section>
+    </section>
+    <section class="subsection-wrapper-orange">
+        <section class="subsection-lower">
+            <form class="subsection-column">
+                <div class="subsection-text-heading">Fakturační údaje</div>
+                <label>Číslo karty
+                    <input class="orange" type="number">
+                </label>
+                <label>Platnost
+                    <input class="orange" type="date">
+                </label>
+                <label>CVV
+                    <input class="orange" type="number">
+                </label>
+                <button class="btn-1 borders">ULOŽIT</button>
+            </form>
+        </section>
+    </section>
+</main>
+<footer>
+    <div class="feedback">
+        <div class="feedback-text">Daniel Linda</div>
+        <div class="feedback-subtext">Střední průmyslová škola Ječná 2024</div>
+    </div>
+</footer>
+</body>
+</html>
