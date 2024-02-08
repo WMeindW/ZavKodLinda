@@ -23,7 +23,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 4em;
+    height: 64px;
     width: 100%;
 }
 
@@ -55,13 +55,17 @@ a:hover {
     text-decoration: none;
     color: #FF7B7C;
     scale: 110%;
+    cursor: pointer;
 }
 
 a:active {
     text-decoration: none;
     color: #152456;
 }
-
+a.notify-text:hover {
+    color: #83E1E6;
+    scale: 1;
+}
 .nav {
     display: flex;
     justify-content: center;
@@ -79,7 +83,6 @@ a:active {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     height: 80%;
-    cursor: pointer;
     margin-left: 1em;
 }
 
@@ -97,13 +100,14 @@ a:active {
 
 .drop-down {
     position: absolute;
-    top: 4em;
+    top: 64px;
     width: 100%;
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #83E1E6;
+    z-index: 1;
 }
 
 .drop-text {
@@ -128,12 +132,37 @@ a:active {
     border-width: 2px;
     cursor: pointer;
     margin-right: 1em;
+    border-radius: 5px;
 }
 
 .nav-text-burger:hover {
     border-color: #FF7B7C;
 }
 
+.drop-notify {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 20em;
+    width: 15em;
+    position: absolute;
+    background-color: #FF7B7C;
+    border: 2px solid #152456;
+    border-radius: 5px;
+    top: 4em;
+    right: 9.8em;
+    z-index: 1;
+}
+
+.notify-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3em;
+    margin-bottom: 0.5em;
+}
 .banner {
     display: flex;
     justify-content: flex-start;
@@ -152,7 +181,7 @@ a:active {
     align-items: flex-start;
     position: absolute;
     text-align: left;
-    margin-top: 4em;
+    margin-top: 64px;
     top: 0;
     padding-top: 8vw;
     padding-left: 5em;
@@ -506,7 +535,12 @@ footer {
     .nav-text-burger {
         display: flex;
     }
-
+    .drop-notify{
+        width: 100%;
+        right: 0;
+        border: none;
+        top: 64px;
+    }
     .drop-text {
         display: flex;
     }
