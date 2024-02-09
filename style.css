@@ -108,6 +108,7 @@ a.notify-text:hover {
     align-items: center;
     background-color: #83E1E6;
     z-index: 1;
+    padding-top: 24px;
 }
 
 .drop-text {
