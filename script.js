@@ -17,11 +17,11 @@ function notifyClick() {
     let div = document.getElementById("drop");
     if (isHiddenNotify) {
         notifyDiv.style.display = "flex";
-        div.style.top = (notifyDiv.offsetHeight + 48) + "px";
+        div.style.top = (notifyDiv.offsetHeight + 96) + "px";
         isHiddenNotify = false;
     } else {
         notifyDiv.style.display = "none";
-        div.style.top = "4em";
+        div.style.top = "96px";
         isHiddenNotify = true;
     }
 }
