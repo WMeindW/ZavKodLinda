@@ -554,7 +554,8 @@ footer {
     .drop-notify {
         width: 100%;
         right: 0;
-        border: none;
+        border-radius: 0;
+        border-color: #FF7B7C;
         top: 96px;
     }
 
@@ -607,5 +608,10 @@ footer {
 
     .testimony-container {
         flex-direction: column;
+    }
+
+    .btn-2 {
+        color: #FF7B7C;
+        background-color: #152456;
     }
 }
