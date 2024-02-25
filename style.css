@@ -186,7 +186,7 @@ a.notify-text:hover {
     text-align: left;
     margin-top: 96px;
     top: 0;
-    padding-top: 8vw;
+    padding-top: 6vw;
     padding-left: 5em;
 }
 
@@ -307,7 +307,7 @@ label {
 
 input[type="text"], [type="email"], [type="number"], [type="date"] {
     margin-top: 10px;
-    width: 100%;
+    width: 70%;
     height: 2em;
     background-color: #83E1E6;
     border: 2px solid #152456;
@@ -546,6 +546,48 @@ footer {
     color: black;
 }
 
+.cart-container {
+    margin-bottom: 25px;
+}
+
+.cart-container p {
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.cart-nav {
+    background-color: #FF7B7C;
+    counter-reset: li;
+    display: flex;
+    list-style: none;
+    margin: 0 0 36px 0;
+    padding: 0;
+    text-align: center;
+}
+
+.cart-nav-item {
+    background-color: #90D2CE;
+    counter-increment: li;
+    flex: 1 0 0;
+    position: relative;
+}
+
+.cart-nav-item--active {
+    background-color: inherit;
+}
+
+.cart-content {
+    text-align: center;
+}
+
+.cart-content p {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+
+
 @media only screen and (max-width: 1024px) {
     .nav-text-burger {
         display: flex;
@@ -554,8 +596,7 @@ footer {
     .drop-notify {
         width: 100%;
         right: 0;
-        border-radius: 0;
-        border-color: #FF7B7C;
+        border: none;
         top: 96px;
     }
 
@@ -588,10 +629,6 @@ footer {
         gap: 1em !important;
     }
 
-    .subsection-column {
-        max-width: 80%;
-    }
-
     .subsection-lower {
         flex-direction: column;
         width: 100%;
@@ -610,8 +647,7 @@ footer {
         flex-direction: column;
     }
 
-    .btn-2 {
-        color: #FF7B7C;
-        background-color: #152456;
+    .cart-nav {
+        margin: 0 -10px 24px -10px;
     }
 }
