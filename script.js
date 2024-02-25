@@ -25,3 +25,16 @@ function notifyClick() {
         isHiddenNotify = true;
     }
 }
+
+let currentIndex = 0;
+const productList = document.getElementById('product-list');
+const products = document.querySelectorAll('.product');
+const totalProducts = products.length;
+const productWidth = products[0].offsetWidth; // Considering margin-right
+
+function scrollItems(direction) {
+    currentIndex = (currentIndex + direction + totalProducts) % totalProducts;
+    const transformValue = -currentIndex * productWidth;
+    productList.style.transform = `translateX(${transformValue}px)`;
+}
+

@@ -218,6 +218,23 @@ h1 {
     color: #152456;
 }
 
+.btn-1.not-margin {
+    height: 3em;
+    font-size: 1em;
+    background-color: #FF7B7C;
+    border-color: transparent;
+    margin-right: 0;
+    margin-bottom: 2em;
+    cursor: pointer;
+    font-weight: 600;
+    width: 10em;
+    color: #152456;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
 .btn-1:hover {
     color: #FF7B7C;
     background-color: #152456;
@@ -586,7 +603,95 @@ footer {
     margin-bottom: 15px;
 }
 
+.other-products {
+    background-color: #FF7B7C;
+}
 
+.other-products-title {
+    padding: 0.7rem 0 0 4rem;
+    font-size: 30px;
+    /*
+    border-bottom: 3px solid #90D2CE;
+    */
+}
+
+.other-products-content {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 5rem;
+    /*
+    margin-right: 5rem;
+    */
+    overflow: hidden;
+}
+
+.product-list {
+    display: flex;
+    transition: transform 0.3s ease;
+    gap: 5em;
+}
+
+.product {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.product-title {
+    font-size: 25px;
+    margin: 5px 0 10px 0;
+}
+
+.product-title p {
+    margin: 5px 0 5px 0;
+}
+
+.product-title a:hover {
+    text-decoration: none;
+    color: #fff;
+    scale: 110%;
+    cursor: pointer;
+}
+
+.product-title a {
+    font-size: 17px;
+}
+
+.product-subtext {
+    font-size: 20px;
+}
+
+.product-text {
+
+}
+
+.round-btn {
+    background-color: #83E1E6;
+    border: none;
+    padding: 15px 15px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 25px; /* Rounded corners */
+}
+
+#prev-btn {
+    position: absolute;
+    left: 10px;
+    z-index: 1; /* Bring to the front */
+}
+
+#next-btn {
+    position: absolute;
+    right: 10px;
+    z-index: 1; /* Bring to the front */
+}
 
 @media only screen and (max-width: 1024px) {
     .nav-text-burger {
