@@ -30,7 +30,7 @@ let currentIndex = 0;
 const productList = document.getElementById('product-list');
 const products = document.querySelectorAll('.product');
 const totalProducts = products.length;
-const productWidth = products[0].offsetWidth; // Considering margin-right
+const productWidth = products[0].offsetWidth;
 
 function scrollItems(direction) {
     currentIndex = (currentIndex + direction + totalProducts) % totalProducts;

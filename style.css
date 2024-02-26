@@ -610,9 +610,6 @@ footer {
 .other-products-title {
     padding: 0.7rem 0 0 4rem;
     font-size: 30px;
-    /*
-    border-bottom: 3px solid #90D2CE;
-    */
 }
 
 .other-products-content {
@@ -622,9 +619,6 @@ footer {
     align-items: center;
     justify-content: flex-start;
     margin-left: 5rem;
-    /*
-    margin-right: 5rem;
-    */
     overflow: hidden;
 }
 
@@ -677,20 +671,20 @@ footer {
     padding: 15px 15px;
     text-align: center;
     display: inline-block;
-    cursor: pointer; /* Cursor on hover */
-    border-radius: 25px; /* Rounded corners */
+    cursor: pointer;
+    border-radius: 25px;
 }
 
 #prev-btn {
     position: absolute;
     left: 10px;
-    z-index: 1; /* Bring to the front */
+    z-index: 1;
 }
 
 #next-btn {
     position: absolute;
     right: 10px;
-    z-index: 1; /* Bring to the front */
+    z-index: 1;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -754,5 +748,11 @@ footer {
 
     .cart-nav {
         margin: 0 -10px 24px -10px;
+    }
+}
+
+@media only screen and (max-width: 1536px) {
+    .banner-text {
+        padding-top: 3vw;
     }
 }
