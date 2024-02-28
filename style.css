@@ -590,8 +590,18 @@ footer {
     position: relative;
 }
 
+.cart-nav-item:hover {
+    scale: 1;
+    color: #FF7B7C;
+}
+
 .cart-nav-item--active {
     background-color: inherit;
+}
+
+.cart-nav-item--active:hover {
+    scale: 1;
+    color: #83E1E6
 }
 
 .cart-content {
@@ -699,10 +709,6 @@ footer {
         display: flex;
     }
 
-    .product-list {
-        flex-direction: column;
-    }
-
     .drop-notify {
         width: 100%;
         right: 0;
@@ -756,7 +762,6 @@ footer {
     .testimony-container {
         flex-direction: column;
     }
-
 }
 
 @media only screen and (max-width: 1536px) {
