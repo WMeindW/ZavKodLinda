@@ -43,8 +43,8 @@
 </main>
 <div class="cart-container">
     <nav>
-        <ul class="cart-nav">
-            <li class="cart-nav-item cart-nav-item--active">
+        <div class="cart-nav">
+            <a onclick="cartClick(this)" class="cart-nav-item cart-nav-item--active">
                 <p>
                     <strong>
                         1
@@ -53,8 +53,8 @@
                 <p>
                     Košík
                 </p>
-            </li>
-            <li class="cart-nav-item">
+            </a>
+            <a onclick="cartClick(this)" class="cart-nav-item">
                 <p>
                     <strong>
                         2
@@ -63,8 +63,8 @@
                 <p>
                     Doprava a platba
                 </p>
-            </li>
-            <li class="cart-nav-item">
+            </a>
+            <a onclick="cartClick(this)" class="cart-nav-item">
                 <p>
                     <strong>
                         3
@@ -74,8 +74,8 @@
                     Dodací údaje
                 </p>
 
-            </li>
-        </ul>
+            </a>
+        </div>
     </nav>
     <div class="cart-content">
         <p>
@@ -112,8 +112,8 @@
                         </p>
                     </div>
                     <button class="btn-1 borders not-margin">
-                    <img src="../img/icon-shopping_cart.svg" alt="cart">
-                    Do košíku
+                        <img src="../img/icon-shopping_cart.svg" alt="cart">
+                        Do košíku
                     </button>
                 </div>
             </div>
@@ -385,7 +385,7 @@
             </div>
         </div>
         <button id="prev-btn" class="round-btn" onclick="scrollItems(-1)">
-        <img src="../img/before-icon.svg" alt="before">
+            <img src="../img/before-icon.svg" alt="before">
         </button>
         <button id="next-btn" class="round-btn" onclick="scrollItems(1)">
             <img src="../img/next-icon.svg" alt="next">
