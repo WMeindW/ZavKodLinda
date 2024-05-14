@@ -1,33 +1,45 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
+// Database configuration
+$db_servername = "localhost"; // Change this to your database server name
+$db_username = "your_db_username"; // Change this to your database username
+$db_password = "your_db_password"; // Change this to your database password
+$db_name = "your_db_name"; // Change this to your database name
 
-require 'mailer/Exception.php';
-require 'mailer/PHPMailer.php';
-require 'mailer/SMTP.php';
+try {
+    // Create a PDO instance with mysqlnd driver
+    $dsn = "mysql:host=$db_servername;dbname=$db_name";
+    $conn = new PDO($dsn, $db_username, $db_password);
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+    // Set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $mail = new PHPMailer(true);
-    $mail->isSMTP();
-    $mail->Host = 'spsejecna-cz.mail.protection.outlook.com';
-    $mail->SMTPAuth = true;
-    $mail->Username = 'linda2@spsejecna.cz';
-    $mail->Password = '********';
-    $mail->SMTPSecure = false;
-    $mail->Port = 587;
+    // Check if form is submitted
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Get form data
+        $form_username = $_POST["username"];
+        $form_password = $_POST["password"];
 
-    $mail->setFrom('linda2@spsejecna.cz', 'Linda');
-    $mail->addAddress('daniellinda2005@gmail.com', 'Daniel');
+        // You can add validation and sanitation here if needed
 
-    $mail->isHTML(true);
-    $mail->Subject = 'Nová registrace';
-    $mail->Body = 'Uživatelské jméno: ' . $username . '<br>Heslo: ' . $password;
+        // SQL to insert data into database
+        $sql = "INSERT INTO listik (username, passwd) VALUES (:username, :password)";
 
-    if ($mail->send()) {
-        echo 'Email byl úspěšně odeslán.';
-    } else {
-        echo 'Nastala chyba při odesílání emailu: ' . $mail->ErrorInfo;
+        // Prepare the SQL statement
+        $stmt = $conn->prepare($sql);
+
+        // Bind parameters
+        $stmt->bindParam(':username', $form_username);
+        $stmt->bindParam(':password', $form_password);
+
+        // Execute the SQL statement
+        $stmt->execute();
+
+        echo "New record created successfully";
     }
 }
+catch(PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
+
+// Close connection
+$conn = null;

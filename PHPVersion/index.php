@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php echo file_get_contents("php/head.php"); ?>
+<?php echo file_get_contents("php/head.php");
+?>
 <body>
 <header>
     <?php echo file_get_contents("php/header.php"); ?>
